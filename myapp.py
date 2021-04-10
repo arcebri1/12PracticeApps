@@ -5,7 +5,7 @@ import pandas as pd
 st.write("""
 # Simple Stock Price App
 
-Below you can see Google's stock price
+Below is Google's stock information for May 31 2010-2020
 
 """)
 
@@ -19,3 +19,16 @@ tickerData = yf.Ticker(tickerSymbol)
 tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
 st.write(tickerDf)
 
+st.write("""
+
+## Google's Stock Closing Price for May 31 2010-2020
+
+""")
+st.line_chart(tickerDf.Close)
+
+st.write("""
+
+## Google's Stock Volume Price for May 31 2010-2020
+
+""")
+st.line_chart(tickerDf.Volume)
