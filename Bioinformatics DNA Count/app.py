@@ -73,4 +73,8 @@ p = alt.Chart(df).mark_bar().encode(
     x = 'Nucleotide',
     y = 'Count'
 )
+p = p.properties(
+    width=alt.Step(80)  # controls width of bar.
+)
+
 p
