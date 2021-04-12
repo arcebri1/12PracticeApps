@@ -59,3 +59,11 @@ st.write('There are ' + str(X['A']) + ' adenine (A)')
 st.write('There are  ' + str(X['T']) + ' thymine (T)')
 st.write('There are  ' + str(X['G']) + ' guanine (G)')
 st.write('There are  ' + str(X['C']) + ' cytosine (C)')
+
+st.subheader('3. Display Dataframe')
+df = pd.DataFrame.from_dict(X, orient='index')
+# df
+df = df.rename({0:'Count'}, axis='columns')
+df.reset_index(inplace=True)
+df = df.rename(columns = {'index':'Nucleotide'})
+df
