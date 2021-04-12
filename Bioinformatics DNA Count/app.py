@@ -67,3 +67,10 @@ df = df.rename({0:'Count'}, axis='columns')
 df.reset_index(inplace=True)
 df = df.rename(columns = {'index':'Nucleotide'})
 df
+
+st.subheader('4. Display Bar Chart')
+p = alt.Chart(df).mark_bar().encode(
+    x = 'Nucleotide',
+    y = 'Count'
+)
+p
