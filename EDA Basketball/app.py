@@ -58,5 +58,7 @@ selected_position = st.sidebar.multiselect('Position', position_selection, posit
 filter_data_selected = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_position))]
 filter_data_selected
 
-
+st.header('Display Player Stats of Selected Team(s')
+st.write('Data Dimension: ' + str(filter_data_selected.shape[0]) + ' rows and ' + str(filter_data_selected.shape[1]) + 'columns')
+st.dataframe(filter_data_selected)
 
