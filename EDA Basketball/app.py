@@ -55,7 +55,8 @@ selected_team = st.sidebar.multiselect('Team', sorted_team_selection, sorted_tea
 position_selection = ['C', 'PF', 'SF', 'PG', 'SG']
 selected_position = st.sidebar.multiselect('Position', position_selection, position_selection)
 
-
+filter_data_selected = playerstats[(playerstats.Tm.isin(selected_team)) & (playerstats.Pos.isin(selected_position))]
+filter_data_selected
 
 
 
